@@ -37,3 +37,7 @@ yarn-debug.log*
 
 # Ignore API keys and secrets
 /.env
+
+# Ignore self signed SSL certificates
+/localhost.key
+/localhost.crt

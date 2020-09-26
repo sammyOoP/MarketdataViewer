@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'portfolio/index'
   get 'overview/index'
 
   root 'overview#index'

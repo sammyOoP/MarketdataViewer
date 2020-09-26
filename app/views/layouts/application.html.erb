@@ -8,8 +8,34 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <%= link_to "Marketdata Viewer", root_path, class: "navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <%= link_to build_active_link("Overview"), overview_index_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "My Portfolio", portfolio_index_path, class: "nav-link" %>
+            </li>
+          <ul>
+        </div>  
+      </div>
+    </nav>
+  </header>
+  <div class="container">
     <%= yield %>
+  </div>
+  <footer>
+  </footer>
+  
   </body>
+  <%= javascript_pack_tag 'application' %>
 </html>
